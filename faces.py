@@ -38,10 +38,8 @@ class DetectEmotion(object):
                 with graph.as_default():
                     set_session(sess)
                     preds=classifier.predict(roi)[0]
-                    print("Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
                     label=class_labels[preds.argmax()]
                     label_position=(x,y)
-                    print(label)
                 cv2.putText(frame,label,label_position,cv2.FONT_HERSHEY_SIMPLEX,2,(0,255,0),3)
             else:
                 cv2.putText(frame,'No Face Found',(20,20),cv2.FONT_HERSHEY_SIMPLEX,2,(0,255,0),3)
