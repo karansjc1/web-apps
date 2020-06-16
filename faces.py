@@ -10,7 +10,7 @@ sess = tf.Session()
 graph = tf.get_default_graph()
 set_session(sess)
 face_classifier=cv2.CascadeClassifier('static/haarcascade_frontalface_default.xml')
-classifier = load_model('/Study Material/SEPM/SEPM-Front-end/Engine/EmotionDetectionModel.h5')
+classifier = load_model('static/EmotionDetectionModel.h5')
 
 class_labels=['Angry','Happy','Neutral','Sad','Surprise']
 class DetectEmotion(object):
